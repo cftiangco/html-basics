@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-96 w-full bg-[#4C4C6D]">
+
+        <div class="flex items-center justify-between">
+
+            <div class="mx-2 md:mx-10">
+                <a href="index.html">
+                    <img src="/images/logo.png" alt="school logo" class="w-14">
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-10 mx-10">
+                <a href="index.html" class="text-white font-bold tracking-wider hover:text-[#FFE194]">Home</a>
+                <a href="aboutus.html" class="text-white font-bold tracking-wider border-b-2 border-[#FFE194] rounded">About Us</a>
+                <a href="html/insert-images.html" class="text-white font-bold tracking-wider hover:text-[#FFE194]">Get Started</a>
+            </div>
+
+            <div class="flex items-center mx-2 md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" id="menu-open" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>                  
+            </div>
+
+        </div>
+
+        <div class="flex items-center flex-col mt-20">
+            <h1 class="text-3xl font-bold text-white">About Us</h1>
+        </div>
+
+        <div class="absolute top-72 flex justify-center w-full">
+            <img src="images/campus.jpg" class="w-80 md:w-1/3 rounded-2xl">
+        </div>
+
+    </div>
+
+    <div class="mt-32 md:mt-60 w-full block md:flex justify-around">
+        <div class="text-center md:text-start">
+            <h2 class="font-bold text-lg mb-2">Our Team</h2>
+            <ul>
+                <li>Jamaica Jane B. Garingo</li>
+                <li>Kathlene Charisse V. Duran</li>
+                <li>Jashley F. Supan</li>
+                <li>Mart Jairen B.Guillermo</li>
+            </ul>
+        </div> 
+        <div class="text-center md:text-start mt-5 md:mt-0">
+            <h2 class="font-bold text-lg mb-2">Contact Us</h2>
+            <ul>
+                <li>Email: 300864@deped.gov.ph</li>
+                <li>Phone: (044) 958 7495</li>
+                <li>Facebook: https://www.facebook.com/TNHS1947</li>
+                <li>Address: 3114 Talavera, Philippines</li>
+            </ul>
+        </div> 
+    </div>
+
+
+    <footer class="bg-black h-fit w-full fixed bottom-0 z-99">
+        <div class="h-full flex items-center">
+            <small class="text-gray-400 text-center h-full w-full self-center">&copy; 2023-2024 Talavera National High School. All Rights Reserved</small>
+        </div>
+    </footer>
+
+
+    <!-- MENU CONTENT -->
+    <div class="w-full h-screen bg-black-1/2 fixed top-0 hidden" id="menu-content">
+        <div class="w-1/3 h-screen bg-[#1B9C85] fixed right-0 md:hidden fixed">
+            <div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.0" stroke="currentColor" class="w-6 h-6 cursor-pointer m-1 text-white" id="menu-close">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+
+                <div class="flex flex-col justify-center items-center gap-1 mt-10">
+                    <a href="#" class="text-white font-normal tracking-wider">Home</a>
+                    <a href="#" class="text-white font-normal tracking-wider">About Us</a>
+                    <a href="html/insert-images.html" class="text-white font-normal tracking-wider">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- MENU CONTENT -->
+
+    <script>
+        const menuOpen = document.querySelector("#menu-open");
+        const menuClose = document.querySelector("#menu-close");
+        const menuContent = document.querySelector("#menu-content");
+
+        menuOpen.addEventListener('click', () => {
+            menuContent.classList.toggle("hidden");
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuContent.classList.toggle("hidden");
+        });
+
+    </script>
+
+</body>
+</html>
